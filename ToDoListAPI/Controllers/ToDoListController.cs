@@ -60,7 +60,7 @@ public class ToDoListController : ControllerBase
     }
 
     // POST: api/ToDoItems
-    [HttpPost]
+    [HttpPost("add-new-item")]
    
     public async Task<ActionResult<ToDoList>> AddToDoItem(ToDoList toDoList)
     {
