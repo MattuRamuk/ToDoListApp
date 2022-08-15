@@ -32,8 +32,13 @@ public class ToDoListController : Controller
 
         return View(todoItems);
     }
+    
+    public ActionResult AddNew()
+    {
+        return View();
+    }
 
-    public async Task<IActionResult> AddNew(ToDoItem toDoItem)
+    public async Task<IActionResult> Create(ToDoItem toDoItem)
     {
         HttpClient client = _api.Initial();
         
