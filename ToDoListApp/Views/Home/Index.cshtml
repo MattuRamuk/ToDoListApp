@@ -1,0 +1,30 @@
+﻿@using ToDoListApp.Models;
+@model List<WeatherModel>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Temperature C</th>
+            <th>Temperature F</th>
+            <th>Summary</th>
+        </tr>
+        @foreach (WeatherModel weather in Model)
+        {
+            <tr>
+                <td>@weather.Date</td>
+                <td>@weather.TemperatureC</td>
+                <td>@weather.TemperatureF</td>
+                <td>@weather.Summary</td>
+            </tr>
+        }
+    </table>
+</div>
+
+

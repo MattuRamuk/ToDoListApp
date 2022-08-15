@@ -1,0 +1,30 @@
+@using ToDoListApp.Models;
+
+@{
+    ViewData["Title"] = "ToDo List";
+}
+
+<div class="row">
+    <a href="ToDoList/AddNew" class="btn btn-add">Add New Task</a>
+</div>
+<div class="row">
+    <div class="table-responsive">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Task Name</th>
+                    <th>Is Complete</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>@item.TaskName</td>
+                        <td>@item.IsComplete</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
