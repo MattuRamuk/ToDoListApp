@@ -6,6 +6,8 @@ using ToDoListApp.Helper;
 
 namespace ToDoListApp.Controllers;
 
+
+/*TODO: Implement pages and functionality for CRUD*/
 public class ToDoListController : Controller
 {
     private readonly ILogger<ToDoListController> _logger;

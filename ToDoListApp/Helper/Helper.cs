@@ -17,7 +17,7 @@ public class ToDoListAPI
     public HttpClient Initial()
     {
         var client = new HttpClient();
-       client.BaseAddress = new Uri("https://localhost:7130/api/controller/");
+       client.BaseAddress = new Uri("https://localhost:7130/api/todolist/");
        return client;
     }
 }
